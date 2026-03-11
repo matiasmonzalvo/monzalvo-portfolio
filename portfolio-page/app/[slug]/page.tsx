@@ -24,7 +24,7 @@ export default async function ProjectPage({
       </h2>
 
       {project.images && project.images.length > 0 && (
-        <div className="w-full aspect-6/3 flex gap-1  mb-8">
+        <div className="w-4/5 aspect-6/3 flex gap-1  mb-8">
           {project.images.map((src, i) => (
             <div
               key={i}
@@ -43,11 +43,9 @@ export default async function ProjectPage({
       )}
 
       <div className="text-sm leading-relaxed text-muted mb-8 space-y-3">
-        {project.description
-          .split(/\n\s*\n/)
-          .map((paragraph, index) => (
-            <p key={index}>{paragraph.trim()}</p>
-          ))}
+        {project.description.split(/\n\s*\n/).map((paragraph, index) => (
+          <p key={index}>{paragraph.trim()}</p>
+        ))}
       </div>
       <div className="flex flex-wrap gap-2 mb-8">
         {project.tech.map((t) => (

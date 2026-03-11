@@ -25,8 +25,8 @@ const sections = [
     images: ["/me-1.png", "/me-2.jpg"],
     contentType: "text" as const,
     paragraphs: [
-      "Soy Matias Monzalvo, desarrollador web apasionado por crear experiencias digitales limpias y funcionales. Me especializo en construir aplicaciones modernas con tecnologías como React, Next.js y TypeScript.",
-      "Me enfoco en la simplicidad, el rendimiento y los detalles que hacen la diferencia. Siempre buscando aprender algo nuevo y mejorar mi craft.",
+      "Soy Matias Monzalvo, frontend developer y UX/UI designer apasionado por crear experiencias digitales limpias y funcionales. Me especializo en construir aplicaciones modernas con tecnologías como React, Next.js, Tailwind CSS, TypeScript y JavaScript.",
+      "Me enfoco en el diseño, la simplicidad, el rendimiento y los detalles que hacen la diferencia en marcas digitales. Siempre buscando shippear rápido, aprender algo nuevo y mejorar mi craft.",
     ],
   },
   {
@@ -44,7 +44,7 @@ const sections = [
     id: "university",
     span: "Universidad de Belgrano",
     title: "Ingeniería en Informática",
-    images: ["/habitat-1.png", "/habitat-2.png"],
+    images: ["/ub-1.jpg"],
     contentType: "text" as const,
     paragraphs: [
       "Actualmente cursando la carrera de Ingeniería en Informática en la Universidad de Belgrano, donde complemento mi experiencia práctica en desarrollo con una formación sólida en fundamentos de computación, algoritmos, estructuras de datos y arquitectura de software.",
@@ -54,7 +54,6 @@ const sections = [
     id: "skills",
     span: "Conocimientos",
     title: "Habilidades",
-    images: ["/mazzo-1.png", "/mazzo-2.png"],
     contentType: "skills" as const,
   },
 ];
@@ -64,7 +63,7 @@ export default function HomePage() {
     <>
       {sections.map((section) => (
         <section key={section.id} className="mb-16">
-          <span className="text-sm text-muted tabular-nums">
+          <span className="block text-sm text-muted leading-none">
             {section.span}
           </span>
           <h2 className="text-3xl font-medium tracking-tight mt-1 mb-6">
@@ -112,52 +111,6 @@ export default function HomePage() {
           )}
         </section>
       ))}
-
-      {/* Links */}
-      <div className="flex flex-col gap-3 text-sm">
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-foreground hover:text-muted transition-colors w-fit"
-        >
-          GitHub
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-foreground hover:text-muted transition-colors w-fit"
-        >
-          LinkedIn
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </a>
-      </div>
     </>
   );
 }

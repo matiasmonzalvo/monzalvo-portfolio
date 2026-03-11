@@ -58,7 +58,7 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
     <div className="flex h-svh font-sans max-w-6xl mx-auto overflow-hidden">
       {/* Sidebar — full screen on mobile home, hidden on mobile project */}
       <aside
-        className={`shrink-0 h-full px-8 py-8 lg:py-16 flex flex-col justify-between overflow-y-auto ${
+        className={`shrink-0 h-full px-8 py-8 lg:py-16 flex flex-col justify-between overflow-y-auto scroll-invisible ${
           isHome ? "flex w-full md:w-auto" : "hidden md:flex md:w-auto"
         }`}
       >
@@ -106,23 +106,15 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
             </ul>
           </nav>
         </div>
-        <div className="text-xs text-muted">
-          <a
-            href="mailto:tu@email.com"
-            className="hover:text-foreground transition-colors"
-          >
-            tu@email.com
-          </a>
-        </div>
       </aside>
 
       {/* Content — hidden on mobile home, full screen on mobile project */}
       <main
-        className={`flex-1 h-full min-h-0 p-8 lg:p-16 overflow-y-auto ${
+        className={`flex-1 h-full min-h-0 p-8 lg:p-16 overflow-y-auto scroll-invisible ${
           isHome ? "hidden md:flex md:items-start" : "flex items-start"
         }`}
       >
-        <div className="max-w-xl w-full flex flex-col min-h-0 h-full">
+        <div className="max-w-3xl w-full flex flex-col min-h-0 h-full">
           {/* Mobile back button */}
           {!isHome && (
             <button
