@@ -8,6 +8,7 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import ImageReveal from "@/app/components/ImageReveal";
 import { projects } from "@/app/data/projects";
 
 export default function PortfolioShell({ children }: { children: ReactNode }) {
@@ -146,7 +147,7 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
               filter: isTransitioning ? "blur(8px)" : "blur(0px)",
             }}
           >
-            {children}
+            <ImageReveal>{children}</ImageReveal>
           </div>
 
           {/* Prev / Next navigation */}
