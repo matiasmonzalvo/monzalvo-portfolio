@@ -55,13 +55,11 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
       : null;
 
   return (
-    <div className="flex min-h-svh font-sans max-w-4xl mx-auto">
+    <div className="flex h-svh font-sans max-w-6xl mx-auto overflow-hidden">
       {/* Sidebar — full screen on mobile home, hidden on mobile project */}
       <aside
-        className={`shrink-0 p-8 flex-col justify-between min-h-svh ${
-          isHome
-            ? "flex w-full md:w-auto"
-            : "hidden md:flex md:w-auto"
+        className={`shrink-0 h-full px-8 py-8 lg:py-16 flex flex-col justify-between overflow-y-auto ${
+          isHome ? "flex w-full md:w-auto" : "hidden md:flex md:w-auto"
         }`}
       >
         <div>
@@ -120,11 +118,11 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
 
       {/* Content — hidden on mobile home, full screen on mobile project */}
       <main
-        className={`flex-1 p-8 lg:p-16 ${
+        className={`flex-1 h-full min-h-0 p-8 lg:p-16 overflow-y-auto ${
           isHome ? "hidden md:flex md:items-start" : "flex items-start"
         }`}
       >
-        <div className="max-w-xl w-full flex flex-col min-h-[calc(100svh-4rem)] md:min-h-0">
+        <div className="max-w-xl w-full flex flex-col min-h-0 h-full">
           {/* Mobile back button */}
           {!isHome && (
             <button

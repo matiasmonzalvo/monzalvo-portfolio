@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects } from "@/app/data/projects";
 
@@ -17,15 +18,37 @@ export default async function ProjectPage({
 
   return (
     <>
-      <span className="text-xs font-mono text-muted tabular-nums">
-        {project.year}
-      </span>
-      <h2 className="text-2xl font-semibold tracking-tight mt-1 mb-6">
+      <span className="text-sm text-muted tabular-nums">{project.year}</span>
+      <h2 className="text-3xl font-medium tracking-tight mt-1 mb-6">
         {project.title}
       </h2>
-      <p className="text-sm leading-relaxed text-muted mb-8">
-        {project.description}
-      </p>
+
+      {project.images && project.images.length > 0 && (
+        <div className="w-full aspect-6/3 flex gap-1  mb-8">
+          {project.images.map((src, i) => (
+            <div
+              key={i}
+              className="relative flex-1 h-full overflow-hidden rounded-2xl min-w-0"
+            >
+              <Image
+                src={src}
+                alt={`${project.title} - imagen ${i + 1}`}
+                width={1500}
+                height={1500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="text-sm leading-relaxed text-muted mb-8 space-y-3">
+        {project.description
+          .split(/\n\s*\n/)
+          .map((paragraph, index) => (
+            <p key={index}>{paragraph.trim()}</p>
+          ))}
+      </div>
       <div className="flex flex-wrap gap-2 mb-8">
         {project.tech.map((t) => (
           <span
