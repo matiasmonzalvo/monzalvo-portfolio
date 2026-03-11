@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const skills = [
-  "React",
   "Next.js",
   "TypeScript",
+  "React",
   "JavaScript",
   "Tailwind CSS",
   "React Native",
@@ -16,6 +16,11 @@ const skills = [
   "Git",
   "Figma",
 ];
+const certificates = [
+  "C1 Cambridge",
+  "Prompt Engineering by Open AI",
+  "Udemy - Java from beginner to expert",
+];
 
 const sections = [
   {
@@ -25,7 +30,7 @@ const sections = [
     images: ["/me-1.png", "/me-2.jpg"],
     contentType: "text" as const,
     paragraphs: [
-      "Soy Matias Monzalvo, frontend developer y UX/UI designer apasionado por crear experiencias digitales limpias y funcionales. Me especializo en construir aplicaciones modernas con tecnologías como React, Next.js, Tailwind CSS, TypeScript y JavaScript.",
+      "Soy Matias Monzalvo, frontend developer y UX/UI designer de 22 años apasionado por crear experiencias digitales limpias y funcionales. Me especializo en construir aplicaciones modernas con tecnologías como React, Next.js, Tailwind CSS, TypeScript y JavaScript.",
       "Me enfoco en el diseño, la simplicidad, el rendimiento y los detalles que hacen la diferencia en marcas digitales. Siempre buscando shippear rápido, aprender algo nuevo y mejorar mi craft.",
     ],
   },
@@ -36,8 +41,8 @@ const sections = [
     images: ["/derk-1.png", "/atiend-2.png"],
     contentType: "text" as const,
     paragraphs: [
-      "Trabajo como desarrollador frontend construyendo interfaces modernas, performantes y escalables. Mi enfoque está en transformar ideas y diseños en productos digitales funcionales que generen impacto real.",
-      "He trabajado en proyectos que van desde landing pages optimizadas para conversión hasta plataformas SaaS complejas con paneles de administración, integraciones con IA y sistemas de pagos.",
+      "Trabajo como desarrollador frontend construyendo interfaces modernas, performantes y minimalistas. Mi enfoque está en transformar ideas en diseños de productos digitales profesionales que generen impacto real.",
+      "Me encuentro trabajando en Mazzo Developments, donde lidero  proyectos en el área de frontend que van desde aplicaciones web con diseño profesional hasta plataformas SaaS complejas con paneles de administración, integraciones con IA y sistemas de pagos.",
     ],
   },
   {
@@ -47,7 +52,7 @@ const sections = [
     images: ["/ub-1.jpg"],
     contentType: "text" as const,
     paragraphs: [
-      "Actualmente cursando la carrera de Ingeniería en Informática en la Universidad de Belgrano, donde complemento mi experiencia práctica en desarrollo con una formación sólida en fundamentos de computación, algoritmos, estructuras de datos y arquitectura de software.",
+      "Actualmente estoy cursando 5to año de la carrera de Ingeniería en Informática en la Universidad de Belgrano, donde complemento mi experiencia práctica en desarrollo con una formación sólida en fundamentos de computación, algoritmos, estructuras de datos y arquitectura de software.",
     ],
   },
   {
@@ -55,6 +60,12 @@ const sections = [
     span: "Conocimientos",
     title: "Habilidades",
     contentType: "skills" as const,
+  },
+  {
+    id: "certificates",
+    span: "Certificados",
+    title: "Certificados",
+    contentType: "certificates" as const,
   },
 ];
 
@@ -105,6 +116,18 @@ export default function HomePage() {
                   className="text-xs font-mono px-2.5 py-1 rounded-full border border-border text-muted"
                 >
                   {skill}
+                </span>
+              ))}
+            </div>
+          )}
+          {section.contentType === "certificates" && (
+            <div className="flex flex-wrap gap-2">
+              {certificates.map((certificate) => (
+                <span
+                  key={certificate}
+                  className="text-xs font-mono px-2.5 py-1 rounded-full border border-border text-muted"
+                >
+                  {certificate}
                 </span>
               ))}
             </div>

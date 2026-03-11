@@ -24,7 +24,7 @@ Además, el sitio se encuentra integrado con Meta Pixel para el seguimiento de e
 El proyecto combina marketing, producto y software, ya que la misma interfaz sirve tanto para captar clientes como para operar la plataforma que gestiona los agentes de IA.`,
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
     images: ["/atiend-1.png", "/atiend-2.png"],
-    link: "https://example.com",
+    link: "https://www.atiend.com",
   },
   {
     slug: "hiderk",
@@ -41,7 +41,7 @@ Además, la plataforma está integrada con Polar.sh para el sistema de pagos, lo
 El proyecto combina producto SaaS, inteligencia artificial y herramientas para desarrolladores, permitiendo que cualquier empresa agregue capacidades de IA conversacional a su sitio web mediante un simple script embebido.`,
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Polar.sh"],
     images: ["/derk-1.png", "/derk-2.png"],
-    link: "https://example.com",
+    link: "https://www.hiderk.com",
   },
   {
     slug: "centro-cortinas",
@@ -58,6 +58,7 @@ La web fue construida utilizando Next.js y Tailwind CSS, lo que permitió crear 
 El proyecto se enfocó en simplicidad, claridad en la propuesta de valor y generación de contactos, aspectos clave para negocios de servicios locales que dependen de consultas directas desde la web.`,
     images: ["/centrocortinas-1.png"],
     tech: ["Vue.js", "D3.js", "Express", "Redis"],
+    link: "https://www.centro-cortinas.com",
   },
   {
     slug: "my-outfit",
@@ -72,7 +73,7 @@ La aplicación fue construida utilizando Next.js y Tailwind CSS, aprovechando la
 El objetivo del proyecto fue crear una experiencia simple e intuitiva para interactuar con modelos de IA generativa, acercando la tecnología de virtual try-on a un formato accesible desde el navegador.`,
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     images: ["/myoutfit-1.png", "/myoutfit-2.png"],
-    link: "https://example.com",
+    link: "https://www.myout.fit",
   },
   {
     slug: "weekly",
@@ -107,6 +108,7 @@ El proyecto combina desarrollo full-stack, diseño de experiencia de usuario e i
     images: ["/habitat-1.png", "/habitat-2.png"],
 
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "NestJS"],
+    link: "https://www.habitatconecta.com",
   },
   {
     slug: "hariaz",
@@ -121,6 +123,7 @@ El sitio fue construido utilizando Next.js y Tailwind CSS, lo que permitió crea
 El objetivo principal del proyecto fue crear una presencia digital atractiva y profesional que generara confianza y captara nuevos clientes, combinando diseño visual, buenas prácticas de desarrollo web y optimización para motores de búsqueda.`,
     images: ["/hariaz-1.png"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://www.hariaz.com",
   },
   {
     slug: "mazzo-developments",
@@ -135,6 +138,7 @@ El sitio fue construido utilizando Next.js y Tailwind CSS, priorizando performan
 El objetivo principal fue construir una presencia digital profesional para Mazzo Developments, que funcione como punto central para mostrar los servicios de desarrollo, comunicar la identidad de la empresa y generar nuevas oportunidades de negocio.`,
     images: ["/mazzo-1.png", "/mazzo-2.png"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://www.mazzodevelopments.com",
   },
   {
     slug: "gecko",
@@ -149,6 +153,7 @@ La plataforma está desarrollada con Angular en el frontend y Java en el backend
 El proyecto me permitió trabajar sobre un sistema de software en producción dentro del sector salud, participando en su evolución y mantenimiento para mejorar la eficiencia de la gestión clínica.`,
     images: ["/gecko-1.png"],
     tech: ["Angular", "Java"],
+    link: "https://www.gecko.com.ar",
   },
   {
     slug: "atp-solutions",
@@ -165,5 +170,6 @@ Dentro del proyecto me encargué de todo el diseño UX/UI del software, definien
 El objetivo del sistema fue digitalizar y optimizar el proceso de cotización en operaciones de comercio internacional, mejorando la organización de la información, reduciendo tiempos operativos y facilitando el trabajo del equipo comercial de la empresa.`,
     images: ["/atp-1.webp"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "NestJS"],
+    link: "https://www.atpsolutions.com.ar",
   },
 ];

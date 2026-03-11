@@ -17,6 +17,7 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const pendingPath = useRef<string | null>(null);
   const isInitialRender = useRef(true);
+  const mainRef = useRef<HTMLElement>(null);
 
   const navigate = useCallback(
     (path: string) => {
@@ -41,6 +42,7 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
     if (pendingPath.current === pathname) {
       pendingPath.current = null;
       requestAnimationFrame(() => {
+        mainRef.current?.scrollTo({ top: 0 });
         setIsTransitioning(false);
       });
     }
@@ -111,6 +113,7 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
 
       {/* Content — hidden on mobile home, full screen on mobile project */}
       <main
+        ref={mainRef}
         className={`flex-1 h-full min-h-0 p-8 lg:p-16 overflow-y-auto scroll-invisible ${
           isHome ? "hidden md:flex md:items-start" : "flex items-start"
         }`}
@@ -153,7 +156,7 @@ export default function PortfolioShell({ children }: { children: ReactNode }) {
           {/* Prev / Next navigation */}
           {!isHome && (prevProject || nextProject) && (
             <nav
-              className="flex items-center justify-between pt-12 pb-4 mt-auto border-t border-border transition-all duration-300 ease-in-out"
+              className="flex items-center justify-between pt-12 pb-4 mt-auto transition-all duration-300 ease-in-out"
               style={{
                 opacity: isTransitioning ? 0 : 1,
                 filter: isTransitioning ? "blur(8px)" : "blur(0px)",
